@@ -13,5 +13,5 @@ elif [[ "$1" == "shell" ]]
 then
     flask shell
 else
-    uwsgi --virtualenv /env --chdir /code -w ${WSGI_MODULE:-wsgi:app} --uwsgi-socket 0.0.0.0:5000
+    uwsgi --virtualenv /env --chdir /code -w "${WSGI_MODULE:-wsgi:app}" --uwsgi-socket 0.0.0.0:5000
 fi
