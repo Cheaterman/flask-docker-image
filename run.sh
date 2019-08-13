@@ -2,7 +2,7 @@
 
 cd /code
 
-pip install -r ${REQUIREMENTS_FILE:-requirements.txt}
+pip install -U -r ${REQUIREMENTS_FILE:-requirements.txt}
 
 export FLASK_APP=$WSGI_MODULE
 
