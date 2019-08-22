@@ -18,7 +18,7 @@ else
         --chdir /code \
         -w "${WSGI_MODULE:-wsgi:app}" \
         --uwsgi-socket 0.0.0.0:5000 \
-        --master \
-        --processes 4 \
-        --threads 2
+        --gevent 1000 \
+        --gevent-monkey-patch
+
 fi
