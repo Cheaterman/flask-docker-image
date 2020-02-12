@@ -19,6 +19,7 @@ else
         -w "${WSGI_MODULE:-wsgi:app}" \
         --uwsgi-socket 0.0.0.0:5000 \
         --gevent 1000 \
+        --workers 4 \
         --gevent-monkey-patch
 
 fi
