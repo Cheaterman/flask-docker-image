@@ -1,8 +1,5 @@
 FROM cheaterman/uwsgi
 
-RUN pip install flask
+RUN su uwsgi -c "pip3 install --no-cache-dir flask"
 
-ADD run.sh /run.sh
-
-CMD []
-ENTRYPOINT ["/run.sh"]
+ADD run.py /run.py
