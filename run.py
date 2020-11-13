@@ -43,7 +43,7 @@ if len(sys.argv) > 1:
     os.environ['FLASK_APP'] = WSGI_MODULE
 
     if sys.argv[1] == 'sh':
-        subprocess.run(['su', 'uwsgi'])
+        subprocess.run(['su', 'uwsgi'], check=True)
 
     else:
         subprocess.run(['su', 'uwsgi', '-c', 'flask shell'])
