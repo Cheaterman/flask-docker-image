@@ -92,6 +92,7 @@ else:
         '--listen', '1024',
         '--gevent', '1000',
         '--disable-logging',
+        '--wsgi-disable-file-wrapper',
     ]) as uwsgi_process:
         def term_handler(*args):
             uwsgi_process.terminate()
