@@ -79,8 +79,10 @@ else:
         '--workers', os.environ.get('WORKERS', '4'),
         '--listen', '1024',
         '--gevent', '1000',
-        '--disable-logging',
         '--wsgi-disable-file-wrapper',
+        '--ignore-sigpipe',
+        '--ignore-write-errors',
+        '--disable-write-exception',
     ]) as uwsgi_process:
         def term_handler(*args):
             uwsgi_process.terminate()
